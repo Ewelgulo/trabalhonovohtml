@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTE</title>
+
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+</style>
+
+</head>
+<body>
+    <div class="container">
+         <button type="button" onclick="minhafuncao()">Click Aqui para mudar a pagina</button>
+    </div>
+    <p id = "teste">muahahaha</p>
+    <script>
+        function minhafuncao(){
+            document.getElementById("teste").style.fontSize ="30px";
+            document.getElementById("teste").style.color = "red";
+            document.getElementById("teste").style.backgroundColor = "black";
+        }
+
+    </script>
+
+
+</body>
+</html>

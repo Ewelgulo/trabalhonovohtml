@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTE02</title>
+
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .testo{
+            visibility: visible;
+
+        }
+    
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <button type="button" onclick="minhafuncao()">TESTE00000</button>
+   </div>
+   <p id = "texto" style="display: none">A TETÉ VOLTO</p>
+   <script>
+    function minhafuncao(){
+     const texto = document.getElementById("texto");
+     texto.style.visibility = "visible";
+        if (texto.style.display = "none"){
+            texto.style.display = "block";
+        }else{
+            texto.style.display="none";
+        }
+    }
+
+   </script>
+
+
+
+</body>
+</html>
