@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST003</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .area-cor {
+            height: 100vh;
+            width: 100vw;
+            transition: background-color 0.3s;
+        }
+
+        #botaoTc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .Very-Hard {
+            background-color: black;
+            color: white;
+        }
+
+        .Very-Easy {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="area-cor Very-Easy" id="areaCor">
+        <button id="botaoTc">Setar modo Very-Hard</button>
+    </div>
+
+    <script>
+        const botao = document.getElementById('botaoTc');
+        const areaCor = document.getElementById('areaCor');
+        let corAtual = 'Very-Easy';
+
+        function trocarCor() {
+            areaCor.classList.remove(corAtual);
+
+            if (corAtual === 'Very-Easy') {
+                corAtual = 'Very-Hard';
+                botao.textContent = 'Setar modo Very-Easy';
+            } else {
+                corAtual = 'Very-Easy';
+                botao.textContent = 'Setar modo Very-Hard';
+            }
+
+            areaCor.classList.add(corAtual);
+        }
+
+        botao.addEventListener('click', trocarCor);
+    </script>
+</body>
+</html>
