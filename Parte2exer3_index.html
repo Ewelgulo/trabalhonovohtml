@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST003</title>
+
+    <style>
+        
+       
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1>CONTADOR</h1>
+    <h1 id="Valor">0</h1>
+</div>
+    <div  style="align-items: center;">
+    <button id="aumentar"onclick="aumentar()">Aumentar</button>
+    <button id="diminuir"onclick="diminuir()">Diminuir</button>
+    
+</div>
+   <script>
+           let contador = 0;
+            const limite = 11;
+            function aumentar(){
+                contador++;
+                verificarLimite(contador);
+                if(contador==limite){
+                    contador=10;
+                    updateDisplay(contador);
+                }
+                updateDisplay(contador);
+                
+                
+            };function diminuir(){
+                contador--;
+                verificarLimite(contador);
+                updateDisplay(contador);
+            };
+            
+            function updateDisplay(contador){
+                document.getElementById("Valor").innerHTML= contador;
+            };
+            function verificarLimite(){
+                if (contador == limite){
+                alert("O NUMERO DE TENTATIVAS EXCEDE A CAPACIDADE MAXIMA DO PROGRAMA E AGORA O MESMO IRA SE AUTO-DESTRUIR");
+
+                }
+            }
+            
+            
+   
+   </script>
+</body>
+</html>
