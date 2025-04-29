@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST003</title>
+
+    <style>
+        
+       
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1>CONTADOR</h1>
+    <h1 id="Valor">0</h1>
+</div>
+    <div  style="align-items: center;">
+    <button id="aumentar"onclick="aumentar()">Aumentar</button>
+    
+</div>
+   <script>
+           let contador = 0;
+            
+            function aumentar(){
+                updateDisplay(contador++);
+                
+            };
+            
+            function updateDisplay(valor){
+                document.getElementById("Valor").innerHTML= valor;
+            }
+   
+   </script>
+</body>
+</html>
